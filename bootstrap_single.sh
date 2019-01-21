@@ -14,9 +14,7 @@ fi
 # Clone the MultiPool repository if it doesn't exist.
 if [ ! -d $HOME/multipool/yiimp_single ]; then
 	echo Downloading MultiPool YiiMP Single Server Installer ${TAG}. . .
-	git clone \
-		-b ${TAG} --depth 1 \
-		https://github.com/cryptopool-builders/multipool_yiimp_single \
+	git clone https://github.com/traketal/multipool_yiimp_single \
 		$HOME/multipool/yiimp_single \
 		< /dev/null 2> /dev/null
 

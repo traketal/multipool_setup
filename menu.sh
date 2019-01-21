@@ -5,16 +5,11 @@
 
 source /etc/functions.sh
 
-RESULT=$(dialog --stdout --title "Ultimate Crypto-Server Setup Installer v1.46" --menu "Choose one" -1 60 9 \
+RESULT=$(dialog --stdout --title "Ultimate Crypto-Server Setup Installer v1.46" --menu "Choose one" -1 60 4 \
 1 "YiiMP Single Server" \
-2 "YiiMP Multi Server" \
-3 "YiiMP Stratum Upgrade" \
-4 "NOMP Server" \
-5 "MPOS Server - Coming Soon" \
-6 "CryptoNote-Nodejs Server - Coming Soon" \
-7 "Faucet Script - Coming Soon" \
-8 "Coin Daemon Installer" \
-9 Exit)
+2 "NOMP Server" \
+3 "Coin Daemon Installer" \
+4 Exit)
 if [ $RESULT = ]
 then
 exit;
@@ -38,45 +33,10 @@ if [ $RESULT = 3 ]
 then
 clear;
 cd $HOME/multipool/install
-source bootstrap_upgrade.sh;
-fi
-
-if [ $RESULT = 4 ]
-then
-clear;
-cd $HOME/multipool/install
-source bootstrap_nomp.sh;
-fi
-
-if [ $RESULT = 5 ]
-then
-clear;
-cd $HOME/multipool/install
-exit 0;
-fi
-
-if [ $RESULT = 6 ]
-then
-clear;
-cd $HOME/multipool/install
-exit 0;
-fi
-
-if [ $RESULT = 7 ]
-then
-clear;
-cd $HOME/multipool/install
-exit 0;
-fi
-
-if [ $RESULT = 8 ]
-then
-clear;
-cd $HOME/multipool/install
 source bootstrap_coin.sh;
 fi
 
-if [ $RESULT = 9 ]
+if [ $RESULT = 4 ]
 then
 clear;
 exit;

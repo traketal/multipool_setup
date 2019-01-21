@@ -26,7 +26,7 @@ if [ $RESULT = 2 ]
 then
 clear;
 cd $HOME/multipool/install
-source bootstrap_multi.sh;
+source bootstrap_nomp.sh;
 fi
 
 if [ $RESULT = 3 ]

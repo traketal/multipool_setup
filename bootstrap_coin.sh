@@ -19,8 +19,7 @@ if [ ! -d $HOME/multipool/daemon_builder ]; then
 	echo
 fi
 
-# Change directory to it.
-cd $HOME/multipool/daemon_builder
+
 
 # Start setup script.
 cd $HOME/multipool/daemon_builder
